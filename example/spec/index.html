@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jasmine</title>
+
+  <link rel="stylesheet" type="text/css" href="spec/vendor/jasmine.css">
+
+  <script src="spec/vendor/jasmine.js"></script>
+  <script src="spec/helper.js"></script>
+
+  <script src="lib/player.js"></script>
+  <script src="lib/song.js"></script>
+
+  <script src="spec/lib/player.spec.js"></script>
+
+  <script>
+    (function() {
+      var reporter    = new jasmine.JsApiReporter(),
+          environment = jasmine.getEnv();
+
+      environment.updateInterval = 100;
+      environment.addReporter(reporter);
+
+      // Add a custom reporter, allowing Oink to retrieve the errors.
+      environment.addReporter({
+        reportSpecResults: function(spec) {
+          spec.results().getItems().forEach(function(item) {
+            if (!item.passed()) {
+              window.errors = window.errors || [];
+              window.errors.push({
+                source  : spec.getFullName(),
+                message : item.message
+              });
+            }
+          });
+        }
+      });
+
+      window.addEventListener("load", function() {
+        environment.execute();
+      });
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>

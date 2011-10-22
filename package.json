@@ -1,0 +1,15 @@
+{ "name"        : "oink",
+  "version"     : "0.1.0",
+  "description" : "A simple test runner built on webkit-server.",
+  "keywords"    : ["jasmine", "testing", "unit", "webkit-server"],
+  "homepage"    : "https://github.com/tristandunn/oink",
+  "author"      : "Tristan Dunn <hello@tristandunn.com> (http://tristandunn.com)",
+  "main"        : "index.js",
+  "repository"  : {
+    "type" : "git",
+    "url"  : "https://github.com/tristandunn/oink.git"
+  },
+  "dependencies" : {
+    "webkit-server" : "0.1.0"
+  }
+}
