@@ -3,15 +3,16 @@
 <head>
   <title>Jasmine</title>
 
-  <link rel="stylesheet" type="text/css" href="spec/vendor/jasmine.css">
+  <link rel="stylesheet" type="text/css" href="../spec/vendor/jasmine.css">
 
-  <script src="spec/vendor/jasmine.js"></script>
-  <script src="spec/helper.js"></script>
+  <script src="../spec/vendor/jasmine.js"></script>
+  <script src="../spec/vendor/jasmine-html.js"></script>
+  <script src="../spec/helper.js"></script>
 
-  <script src="lib/player.js"></script>
-  <script src="lib/song.js"></script>
+  <script src="../lib/player.js"></script>
+  <script src="../lib/song.js"></script>
 
-  <script src="spec/lib/player.spec.js"></script>
+  <script src="../spec/lib/player.spec.js"></script>
 
   <script>
     (function() {
@@ -19,6 +20,7 @@
       environment = jasmine.getEnv();
       environment.updateInterval = 100;
       environment.addReporter(new jasmine.JsApiReporter());
+      environment.addReporter(new jasmine.TrivialReporter());
 
       // Add a custom reporter, allowing Oink to retrieve the errors.
       environment.addReporter({
