@@ -15,11 +15,10 @@
 
   <script>
     (function() {
-      var reporter    = new jasmine.JsApiReporter(),
-          environment = jasmine.getEnv();
-
+      var
+      environment = jasmine.getEnv();
       environment.updateInterval = 100;
-      environment.addReporter(reporter);
+      environment.addReporter(new jasmine.JsApiReporter());
 
       // Add a custom reporter, allowing Oink to retrieve the errors.
       environment.addReporter({
