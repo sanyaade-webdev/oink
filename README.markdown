@@ -13,7 +13,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     node example/spec/index.js
 
     Player #skip should throw an exception to demonstrate error reporting.
-        TypeError: Result of expression 'player.skip' [undefined] is not a function. in http://localhost:3100/spec/lib/player.spec.js (line 54)
+        TypeError: Result of expression 'player.skip' [undefined] is not a function. in /spec/lib/player.spec.js (line 54)
 
     Finished in 0.501 seconds.
     9 tests, 1 failure
