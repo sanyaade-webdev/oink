@@ -18,9 +18,20 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Finished in 0.501 seconds.
     9 tests, 1 failure
 
+### Running the QUnit Example
+
+    node examples/qunit/test/index.js
+
+    Player#skip should throw an exception to demonstrate error reporting
+        TypeError: Result of expression 'player.skip' [undefined] is not a function.
+
+    Finished in 0.534 seconds.
+    8 tests, 1 failure
+
 ## Supported Libraries
 
 * Jasmine - [Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/jasmine.js), [Library](https://github.com/pivotal/jasmine)
+* QUnit - [Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/qunit.js), [Library](http://docs.jquery.com/QUnit)
 
 ## Custom Adapters
 

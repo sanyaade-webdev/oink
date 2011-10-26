@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QUnit</title>
+
+  <link rel="stylesheet" type="text/css" href="../test/vendor/qunit.css">
+
+  <script src="../test/vendor/qunit.js"></script>
+  <script src="../test/vendor/sinon.js"></script>
+
+  <script src="../lib/player.js"></script>
+  <script src="../lib/song.js"></script>
+
+  <script src="../test/lib/player.test.js"></script>
+
+  <script>
+    (function() {
+      window.errors = [];
+
+      function addOrUpdateError(key, value) {
+        var error = window.errors[window.errors.length - 1];
+
+        if (!error || error[key]) {
+          window.errors.push(error = {});
+        }
+
+        error[key] = value;
+      }
+
+      var consoleError = console.error;
+
+      console.error = function(error) {
+        consoleError.apply(console, arguments);
+
+        if (error instanceof Error) {
+          addOrUpdateError("message", error.toString());
+        }
+      };
+
+      QUnit.testDone = function(test) {
+        if (test.failed) {
+          addOrUpdateError("source", test.module + " " + test.name);
+        }
+      };
+    })();
+  </script>
+</head>
+<body>
+
+<h1 id="qunit-header">QUnit example</h1>
+<h2 id="qunit-banner"></h2>
+<h2 id="qunit-userAgent"></h2>
+
+<ol id="qunit-tests"></ol>
+
+</body>
+</html>
