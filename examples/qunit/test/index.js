@@ -4,5 +4,6 @@ var Path = require("path"),
 new Oink.Runner({
   root    : Path.resolve(__dirname, ".."),
   color   : true,
+  filter  : process.argv[2],
   adapter : Oink.Adapter.QUnit
 }).run();
