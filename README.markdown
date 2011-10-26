@@ -12,8 +12,10 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
 
     node examples/jasmine/spec/index.js
 
-    Player #skip should throw an exception to demonstrate error reporting.
-        TypeError: Result of expression 'player.skip' [undefined] is not a function. in /spec/lib/player.spec.js (line 54)
+    Failures:
+
+      1) Player #skip should throw an exception to demonstrate error reporting.
+         TypeError: Result of expression 'player.skip' [undefined] is not a function. in /spec/lib/player.spec.js (line 54)
 
     Finished in 0.501 seconds.
     6 tests, 1 failure
@@ -22,8 +24,10 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
 
     node examples/qunit/test/index.js
 
-    Player#skip should throw an exception to demonstrate error reporting
-        TypeError: Result of expression 'player.skip' [undefined] is not a function.
+    Failures:
+
+      1) Player#skip should throw an exception to demonstrate error reporting
+         TypeError: Result of expression 'player.skip' [undefined] is not a function.
 
     Finished in 0.534 seconds.
     8 tests, 1 failure
