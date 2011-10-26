@@ -16,7 +16,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
         TypeError: Result of expression 'player.skip' [undefined] is not a function. in /spec/lib/player.spec.js (line 54)
 
     Finished in 0.501 seconds.
-    9 tests, 1 failure
+    6 tests, 1 failure
 
 ### Running the QUnit Example
 
