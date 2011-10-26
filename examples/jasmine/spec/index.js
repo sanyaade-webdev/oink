@@ -1,5 +1,5 @@
 var Path = require("path"),
-    Oink = require("../../");
+    Oink = require("../../../");
 
 new Oink.Runner({
   root    : Path.resolve(__dirname, ".."),
