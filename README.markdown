@@ -2,15 +2,15 @@
 
 A simple test runner built on [node-webkit-server](https://github.com/tristandunn/node-webkit-server).
 
-## Example
+## Examples
 
 ### Setup
 
-    npm install --local
+    $ npm install --local
 
-### Running the Jasmine Example
+### Jasmine ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/jasmine.js), [Library](https://github.com/pivotal/jasmine))
 
-    node examples/jasmine/spec/index.js
+    $ node examples/jasmine/spec/index.js
 
     Failures:
 
@@ -21,9 +21,9 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Finished in 0.501 seconds.
     6 tests, 1 failure
 
-### Running the QUnit Example
+### QUnit ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/qunit.js), [Library](http://docs.jquery.com/QUnit))
 
-    node examples/qunit/test/index.js
+    $ node examples/qunit/test/index.js
 
     Failures:
 
@@ -33,10 +33,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Finished in 0.534 seconds.
     8 tests, 1 failure
 
-## Supported Libraries
 
-* Jasmine - [Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/jasmine.js), [Library](https://github.com/pivotal/jasmine)
-* QUnit - [Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/qunit.js), [Library](http://docs.jquery.com/QUnit)
 
 ## Custom Adapters
 
