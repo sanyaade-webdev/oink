@@ -33,7 +33,25 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Finished in 0.534 seconds.
     8 tests, 1 failure
 
+## Options
 
+Available options for creating an Oink.Runner instance.
+
+#### adapter
+
+The adapter to use when running tests. **Required.**
+
+#### color
+
+Whether or not to enable colored output. Defaults to `false`.
+
+#### filter
+
+Only run tests matching this filter, which will be converted to a regular expression automatically. Example: `(base|player)\.spec\.js`.
+
+#### root
+
+The root directory of your project. Your library and test files should be accessible from this directory. **Required.**
 
 ## Custom Adapters
 
