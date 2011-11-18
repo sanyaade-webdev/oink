@@ -49,9 +49,17 @@ Whether or not to enable colored output. Defaults to `false`.
 
 Only run tests matching this filter, which will be converted to a regular expression automatically. Example: `(base|player)\.spec\.js`.
 
+*This currently only works when using the built-in server.*
+
 #### root
 
-The root directory of your project. Your library and test files should be accessible from this directory. **Required.**
+The root directory of your project. Your library and test files should be accessible from this directory. **Required, unless `url` is set.**
+
+#### url
+
+The URL of an existing server to use for running tests. **Required, unless `root` is set.**
+
+An example use case would be loading a test page through a Rails 3.1 server, allowing you to use Sprockets for depedency management.
 
 ## Custom Adapters
 
