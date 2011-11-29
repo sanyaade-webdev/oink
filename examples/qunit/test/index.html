@@ -33,7 +33,7 @@
         consoleError.apply(console, arguments);
 
         if (error instanceof Error) {
-          addOrUpdateError("message", error.toString());
+          addOrUpdateError("message", error.toString().replace(/\n/g, "\\n"));
         }
       };
 

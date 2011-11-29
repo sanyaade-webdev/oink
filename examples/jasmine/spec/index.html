@@ -30,7 +30,7 @@
               window.errors = window.errors || [];
               window.errors.push({
                 source  : spec.getFullName(),
-                message : item.message
+                message : item.message.replace(/\n/g, "\\n")
               });
             }
           });
