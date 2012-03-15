@@ -15,10 +15,9 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Failures:
 
       1) Player #skip should throw an exception to demonstrate error reporting.
-         TypeError: Result of expression 'player.skip' [undefined] is not a function.
-         # ./spec/lib/player.spec.js:54
+         TypeError: 'undefined' is not a function
 
-    Finished in 0.501 seconds.
+    Finished in 0.642 seconds.
     6 tests, 1 failure
 
 ### Mocha ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/mocha.js), [Library](https://github.com/visionmedia/mocha))
@@ -40,9 +39,9 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Failures:
 
       1) Player#skip should throw an exception to demonstrate error reporting
-         TypeError: Result of expression 'player.skip' [undefined] is not a function.
+         TypeError: 'undefined' is not a function
 
-    Finished in 0.534 seconds.
+    Finished in 0.834 seconds.
     8 tests, 1 failure
 
 ## Options
