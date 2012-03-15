@@ -21,6 +21,18 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
     Finished in 0.501 seconds.
     6 tests, 1 failure
 
+### Mocha ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/mocha.js), [Library](https://github.com/visionmedia/mocha))
+
+    $ node examples/mocha/spec/index.js
+
+    Failures:
+
+      1) should throw an exception to demonstrate error reporting
+         TypeError: 'undefined' is not a function
+
+    Finished in 0.665 seconds.
+    5 tests, 1 failure
+
 ### QUnit ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/qunit.js), [Library](http://docs.jquery.com/QUnit))
 
     $ node examples/qunit/test/index.js

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mocha</title>
+
+  <link rel="stylesheet" type="text/css" href="../test/vendor/mocha.css">
+
+  <script src="../test/vendor/mocha.js"></script>
+  <script src="../test/vendor/expect.js"></script>
+
+  <script src="../lib/player.js"></script>
+  <script src="../lib/song.js"></script>
+
+  <script>
+    mocha.setup({ ui: "bdd" });
+  </script>
+
+  <script src="../test/lib/player.test.js"></script>
+
+  <script>
+    window.addEventListener("load", function() {
+      mocha.run();
+    });
+
+    window.errors = function() {
+      var errors   = [],
+          elements = document.querySelectorAll("pre.error");
+
+      for (var index = 0; index < elements.length; index++) {
+        var element = elements[index];
+
+        errors.push({
+          source  : element.previousSibling.textContent,
+          message : element.textContent.replace(/\n/g, "\\n")
+        });
+      }
+
+      return errors;
+    };
+  </script>
+</head>
+<body>
+
+<div id="mocha"></div>
+
+</body>
+</html>
