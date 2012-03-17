@@ -10,7 +10,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
 
 ### Jasmine ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/jasmine.js), [Library](https://github.com/pivotal/jasmine))
 
-    $ node examples/jasmine/spec/index.js
+    $ node examples/jasmine/spec
 
     Failures:
 
@@ -22,7 +22,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
 
 ### Mocha ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/mocha.js), [Library](https://github.com/visionmedia/mocha))
 
-    $ node examples/mocha/spec/index.js
+    $ node examples/mocha/test
 
     Failures:
 
@@ -34,7 +34,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
 
 ### QUnit ([Adapter](https://github.com/tristandunn/oink/tree/master/lib/adapter/qunit.js), [Library](http://docs.jquery.com/QUnit))
 
-    $ node examples/qunit/test/index.js
+    $ node examples/qunit/test
 
     Failures:
 
