@@ -26,7 +26,7 @@ A simple test runner built on [node-webkit-server](https://github.com/tristandun
 
     Failures:
 
-      1) should throw an exception to demonstrate error reporting
+      1) Player #skip should throw an exception to demonstrate error reporting
          TypeError: 'undefined' is not a function
 
     Finished in 0.665 seconds.

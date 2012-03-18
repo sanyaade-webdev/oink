@@ -27,12 +27,18 @@
           elements = document.querySelectorAll("pre.error");
 
       for (var index = 0; index < elements.length; index++) {
-        var element = elements[index];
+        var element = elements[index],
+            source  = element.previousSibling.textContent,
+            message = element.textContent.replace(/\n/g, "\\n"),
+            element = element.parentNode;
 
-        errors.push({
-          source  : element.previousSibling.textContent,
-          message : element.textContent.replace(/\n/g, "\\n")
-        });
+        while (element = element.parentNode) {
+          if (element.className && element.className.match(/suite|test/)) {
+            source = element.firstChild.textContent + " " + source;
+          }
+        }
+
+        errors.push({ source : source, message : message });
       }
 
       return errors;
