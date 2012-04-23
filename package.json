@@ -10,6 +10,6 @@
     "url"  : "https://github.com/tristandunn/oink.git"
   },
   "dependencies" : {
-    "webkit-server" : "0.2.0"
+    "webkit-server" : "0.3.0"
   }
 }
